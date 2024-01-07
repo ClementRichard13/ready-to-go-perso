@@ -11,9 +11,13 @@ function App() {
 
   return (
     <div className="App">
-      <Switch setState={setSwitch1} />
-      <Switch setState={setSwitch2} />
-      <Switch setState={setSwitch3} />
+      <Switch setState={setSwitch1} state={switch1} />
+      <Switch setState={setSwitch2} state={switch2} />
+      <Switch setState={setSwitch3} state={switch3} />
+
+      <p className={switch1 && switch2 && switch3 ? "GO" : "NOWAY"}>
+        {switch1 && switch2 && switch3 ? "GO !" : "NO WAY !"}
+      </p>
     </div>
   );
 }
